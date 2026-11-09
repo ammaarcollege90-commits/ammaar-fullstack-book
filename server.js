@@ -14,6 +14,7 @@ const port = Number(process.env.PORT || 3000);
 const allowedOrigin = process.env.CORS_ORIGIN || undefined;
 
 app.disable('x-powered-by');
+app.set('trust proxy', 1);
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({ origin: allowedOrigin }));
 app.use(express.json({ limit: '20kb' }));
