@@ -35,6 +35,30 @@ nav a {
   margin-right: 10px;
 }
 
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #555;
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d4d4d4;
+}
+
+.primary-button {
+  background: #d9d9d9;
+}
+
+.inline-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: blue;
+  text-decoration: underline;
+}
+
 .hero {
   padding: 15px 0;
 }
@@ -70,14 +94,25 @@ nav a {
   margin-top: auto;
 }
 
+.card-actions button {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
 .book-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+  border: 1px solid black;
+  padding: 15px;
 }
 
 .form-wide {
   grid-column: 1 / 4;
+}
+
+.form-actions {
+  text-align: right;
 }
 
 label {
@@ -90,19 +125,30 @@ textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 4px;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #777;
 }
 
 .auth-dialog {
   width: 380px;
   max-width: 90%;
+  padding: 20px;
 }
 
 .dialog-close {
   float: right;
+  padding: 0 6px;
+  font-size: 18px;
 }
 
 .auth-form label {
   margin-bottom: 8px;
+}
+
+.auth-form button[type="submit"] {
+  width: 100%;
 }
 
 .form-message {
