@@ -1,34 +1,8 @@
 body {
-  margin: 0;
-  font-family: Verdana, Tahoma, sans-serif;
-  font-size: 14px;
-  background: #e9e6df;
-  color: black;
-}
-
-a {
-  color: #0000cc;
-}
-
-h1 {
-  font-family: "Times New Roman", serif;
-  font-size: 30px;
-  margin: 0 0 8px;
-}
-
-h2 {
-  font-family: "Times New Roman", serif;
-  font-size: 23px;
-  margin: 0;
-}
-
-h3 {
-  font-size: 16px;
-  margin: 0 0 4px;
-}
-
-p {
-  margin: 0 0 8px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
 }
 
 [hidden] {
@@ -41,202 +15,73 @@ p {
 }
 
 .site-header {
-  background: #3b6ea5;
-  color: white;
-  padding: 12px 20px 14px 15px;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid #274a73;
+  gap: 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
 .brand {
-  color: white;
-  font-size: 21px;
-  font-family: "Times New Roman", serif;
-  text-decoration: none;
+  font-size: 20px;
   font-weight: bold;
 }
 
 nav {
   margin-left: auto;
-  margin-right: 25px;
 }
 
 nav a {
-  color: #fff;
-  margin-left: 14px;
-  font-size: 13px;
-}
-
-.account-actions {
-  display: flex;
-  align-items: center;
-}
-
-.user-greeting {
-  margin-right: 8px;
-  font-size: 13px;
-}
-
-.text-button {
-  padding: 3px 9px;
-  margin-left: 4px;
-  border: 2px outset #ddd;
-  background: #ddd;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.inline-button {
-  border: 0;
-  background: none;
-  color: #0000cc;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.primary-button {
-  display: inline-block;
-  padding: 6px 14px;
-  background: #3b6ea5;
-  color: white;
-  border: 2px outset #6a95c4;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 13px;
+  margin-right: 10px;
 }
 
 .hero {
-  background: #f7f5ee;
-  padding: 22px 20px 18px 30px;
-  border-bottom: 1px solid #999;
-}
-
-.hero-text {
-  width: 70%;
-  margin-bottom: 14px;
-  line-height: 19px;
-}
-
-.content-section {
-  padding: 15px 20px 10px 30px;
+  padding: 15px 0;
 }
 
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
-  border-bottom: 2px solid #999;
-  padding-bottom: 6px;
-}
-
-.search-control input {
-  width: 230px;
-  padding: 4px;
-  border: 1px solid #666;
-}
-
-.subtle-message {
-  color: #555;
-  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 .book-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px 10px;
+  gap: 10px;
 }
 
 .book-card {
-  background: #fffef8;
-  border: 1px solid #888;
-  padding: 10px 12px 8px 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 0 #bbb;
+  border: 1px solid black;
+  padding: 10px;
 }
 
-.book-meta {
+.book-meta,
+.card-footer {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  margin-bottom: 6px;
-}
-
-.status {
-  padding: 1px 5px;
-  font-size: 11px;
-  border: 1px solid #666;
-}
-
-.status-available {
-  background: #b9e8b0;
-}
-
-.status-borrowed {
-  background: #f3dd8a;
-}
-
-.status-reserved {
-  background: #eaa7a7;
-}
-
-.author {
   font-size: 13px;
-  font-style: italic;
-  color: #274a73;
-}
-
-.description {
-  font-size: 12px;
-  margin: 7px 0 10px;
-  line-height: 16px;
 }
 
 .card-footer {
   margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-}
-
-.card-actions button {
-  margin-left: 4px;
-  font-size: 11px;
-  cursor: pointer;
-}
-
-.card-actions .danger {
-  color: #cc0000;
-}
-
-.manage-section {
-  background: #f7f5ee;
-  border: 1px solid #888;
-  margin: 10px 20px 20px 30px;
-  padding: 12px;
 }
 
 .book-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 9px 12px;
+  gap: 10px;
 }
 
 .form-wide {
   grid-column: 1 / 4;
 }
 
-.form-actions {
-  text-align: right;
-}
-
 label {
   display: block;
-  font-size: 12px;
-  font-weight: bold;
 }
 
 input,
@@ -245,63 +90,30 @@ textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 2px;
-  padding: 4px;
-  border: 1px solid #666;
-  font-family: Verdana;
-  font-size: 13px;
-  font-weight: normal;
 }
 
 .auth-dialog {
   width: 380px;
   max-width: 90%;
-  padding: 16px 18px;
-  border: 2px solid #444;
-  background: #f7f5ee;
-}
-
-.auth-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .dialog-close {
   float: right;
-  border: 0;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .auth-form label {
-  margin-bottom: 9px;
-}
-
-.auth-form .primary-button {
-  width: 100%;
+  margin-bottom: 8px;
 }
 
 .form-message {
-  color: #cc0000;
-  font-size: 12px;
-}
-
-.switch-copy {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 13px;
+  color: red;
 }
 
 footer {
-  background: #444;
-  color: #ddd;
+  margin-top: 30px;
+  border-top: 1px solid black;
+  padding-top: 10px;
   text-align: center;
-  padding: 12px;
-  margin-top: 25px;
-}
-
-footer p {
-  margin: 0;
 }
 
 .sr-only {
@@ -310,18 +122,6 @@ footer p {
 }
 
 @media (max-width: 700px) {
-  nav {
-    display: none;
-  }
-
-  .user-greeting {
-    display: none;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
   .book-grid,
   .book-form {
     grid-template-columns: 1fr;
@@ -333,14 +133,5 @@ footer p {
 
   .section-heading {
     display: block;
-  }
-
-  .search-control input {
-    width: 100%;
-    margin-top: 8px;
-  }
-
-  .manage-section {
-    margin: 10px;
   }
 }
