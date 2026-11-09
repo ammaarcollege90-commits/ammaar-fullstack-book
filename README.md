@@ -18,7 +18,7 @@ Node.js, Express.js, MySQL, mysql2, bcryptjs, JSON Web Tokens, Helmet, CORS, HTM
 ## Run locally
 
 1. Install Node.js 18 or newer and MySQL.
-2. Import `sql/add.sql` into MySQL. It creates a database named `book_management` and includes three sample books.
+2. Create a database named `book_management`, select it, then import `sql/add.sql`. It creates the tables and sample books.
 3. Copy `.env.example` to `.env`, then update the MySQL details and set a strong `JWT_SECRET`.
 4. Install packages with `npm install`.
 5. Start the system with `npm run dev` or `npm start`.
@@ -61,7 +61,7 @@ Passwords are hashed with bcrypt before storage. JWTs expire after two hours by 
 
 ## Deployment and submission
 
-The repository includes `render.yaml` for a Render web-service deployment. Push this folder to a new GitHub repository, create a MySQL database service, set the database environment variables in Render, then deploy. After deployment, put the real repository URL and the live application URL in the PDF report before submitting.
+The repository includes `render.yaml` for a Render web-service deployment. Push this folder to a new GitHub repository, create a MySQL database service, set the database environment variables in Render, then deploy. The application also creates its tables and sample books automatically when it connects to an empty database. After deployment, put the real repository URL and the live application URL in the PDF report before submitting.
 
 The system needs an external MySQL service when deployed. PlanetScale, Aiven, Railway MySQL or another managed MySQL provider can be used if it provides the variables shown in `.env.example`.
 

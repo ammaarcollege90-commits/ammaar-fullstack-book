@@ -5,7 +5,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
-const { testDatabaseConnection } = require('./config/db');
+const { testDatabaseConnection, ensureDatabaseSchema } = require('./config/db');
 const authRoutes = require('./routes/auth.routes');
 const bookRoutes = require('./routes/books.routes');
 
@@ -54,6 +54,7 @@ app.use((error, req, res, next) => {
 async function startServer() {
   try {
     await testDatabaseConnection();
+    await ensureDatabaseSchema();
     console.log('Connected to MySQL database.');
   } catch (error) {
     console.error(`Database connection failed: ${error.message}`);
