@@ -1,0 +1,29 @@
+{
+  "name": "book-management-system",
+  "version": "1.0.0",
+  "description": "A secure Book Management System built with Node.js, Express.js and MySQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seed.js",
+    "check": "node --check server.js && node --check seed.js && node --check config/db.js && node --check middleware/auth.js && node --check routes/auth.routes.js && node --check routes/books.routes.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
+
