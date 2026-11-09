@@ -24,10 +24,3 @@ CREATE TABLE IF NOT EXISTS books (
   INDEX idx_books_author (author),
   INDEX idx_books_status (status)
 ) ENGINE=InnoDB;
-
-INSERT INTO books (title, author, isbn, category, description, published_year, status) VALUES
-  ('The Alchemist', 'Paulo Coelho', '978-0061122415', 'Fiction', 'A short novel about following a personal dream.', 1988, 'available'),
-  ('Clean Code', 'Robert C. Martin', '978-0132350884', 'Programming', 'A practical guide to writing readable and maintainable software.', 2008, 'available'),
-  ('Atomic Habits', 'James Clear', '978-0735211292', 'Self Development', 'A guide to building better habits through small changes.', 2018, 'reserved')
-ON DUPLICATE KEY UPDATE title = VALUES(title);
-
